@@ -1,2 +1,2 @@
-# Demos
-Playground for shooting exercise
+
+ExercisePlayground
