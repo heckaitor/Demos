@@ -1,1 +1,1 @@
-include ':app', ':interceptradio', ':asyncdialog', ':bezier'
+include ':app', ':interceptradio', ':asyncdialog', ':bezier', ':imagescale'

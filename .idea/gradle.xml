@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/asyncdialog" />
             <option value="$PROJECT_DIR$/bezier" />
+            <option value="$PROJECT_DIR$/imagescale" />
             <option value="$PROJECT_DIR$/interceptradio" />
           </set>
         </option>
