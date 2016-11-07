@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/bezier" />
             <option value="$PROJECT_DIR$/imagescale" />
             <option value="$PROJECT_DIR$/interceptradio" />
+            <option value="$PROJECT_DIR$/touchdemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

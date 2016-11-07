@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/bezier/bezier.iml" filepath="$PROJECT_DIR$/bezier/bezier.iml" />
       <module fileurl="file://$PROJECT_DIR$/imagescale/imagescale.iml" filepath="$PROJECT_DIR$/imagescale/imagescale.iml" />
       <module fileurl="file://$PROJECT_DIR$/interceptradio/interceptradio.iml" filepath="$PROJECT_DIR$/interceptradio/interceptradio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/touchdemo/touchdemo.iml" filepath="$PROJECT_DIR$/touchdemo/touchdemo.iml" />
     </modules>
   </component>
 </project>
