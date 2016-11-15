@@ -1,1 +1,1 @@
-include ':app', ':interceptradio', ':asyncdialog', ':bezier', ':imagescale', ':touchdemo', ':rxandroiddemo'
+include ':app', ':interceptradio', ':asyncdialog', ':bezier', ':imagescale', ':touchdemo', ':rxandroiddemo', ':premissiondemo'
