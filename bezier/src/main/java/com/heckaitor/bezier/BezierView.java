@@ -55,7 +55,7 @@ public class BezierView extends View {
 		path = new Path();
 		paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		coverXfermode = new PorterDuffXfermode(PorterDuff.Mode.CLEAR);
-		lineStrokeWidth = getResources().getDimensionPixelSize(R.dimen.bezier_line_stroke_width);
+		lineStrokeWidth = 8;
 	}
 
 	@Override

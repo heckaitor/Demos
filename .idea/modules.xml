@@ -4,13 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Demos.iml" filepath="$PROJECT_DIR$/Demos.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/asyncdialog/asyncdialog.iml" filepath="$PROJECT_DIR$/asyncdialog/asyncdialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/bezier/bezier.iml" filepath="$PROJECT_DIR$/bezier/bezier.iml" />
-      <module fileurl="file://$PROJECT_DIR$/imagescale/imagescale.iml" filepath="$PROJECT_DIR$/imagescale/imagescale.iml" />
       <module fileurl="file://$PROJECT_DIR$/interceptradio/interceptradio.iml" filepath="$PROJECT_DIR$/interceptradio/interceptradio.iml" />
-      <module fileurl="file://$PROJECT_DIR$/premissiondemo/premissiondemo.iml" filepath="$PROJECT_DIR$/premissiondemo/premissiondemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rxandroiddemo/rxandroiddemo.iml" filepath="$PROJECT_DIR$/rxandroiddemo/rxandroiddemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/touchdemo/touchdemo.iml" filepath="$PROJECT_DIR$/touchdemo/touchdemo.iml" />
     </modules>
   </component>
 </project>

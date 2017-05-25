@@ -10,7 +10,7 @@ import android.widget.RadioButton;
  *
  * Created by kaige1 on 16/9/6.
  */
-public class InterceptedRadioButton extends RadioButton{
+public class InterceptedRadioButton extends RadioButton {
 
 	private OnInterceptCheckedListener interceptCheckedListener;
 

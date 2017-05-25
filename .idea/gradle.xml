@@ -10,13 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/asyncdialog" />
             <option value="$PROJECT_DIR$/bezier" />
-            <option value="$PROJECT_DIR$/imagescale" />
             <option value="$PROJECT_DIR$/interceptradio" />
-            <option value="$PROJECT_DIR$/premissiondemo" />
-            <option value="$PROJECT_DIR$/rxandroiddemo" />
-            <option value="$PROJECT_DIR$/touchdemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
