@@ -1,6 +1,5 @@
 package com.heckaitor.demo;
 
-import com.heckaitor.demo.contents.AnimationsActivity;
 import com.heckaitor.demo.contents.PermissionActivity;
 import com.heckaitor.demo.contents.ViewPagerActivity;
 import com.heckaitor.demo.contents.asyncdialog.AsyncTaskActivity;
@@ -73,7 +72,6 @@ public class Config {
         final List contentDemos = new ArrayList();
         contentDemos.add(new DemoDesc("AlterDialog vs DialogFragment", "在异步任务中更新UI，验证使用Fragment的一些错误用法", AsyncTaskActivity.class));
         contentDemos.add(new DemoDesc("Runtime Permission", "运行时动态获取权限", PermissionActivity.class));
-        contentDemos.add(new DemoDesc("Animation Playground", "一些动画效果的实践", AnimationsActivity.class));
         contentDemos.add(new DemoDesc("ViewPager", "ViewPager在使用过程中的坑", ViewPagerActivity.class));
         mEntrances.put(Category.CONTENT, contentDemos);
         

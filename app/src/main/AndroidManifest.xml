@@ -24,7 +24,6 @@
         <activity android:name=".contents.asyncdialog.AsyncTaskActivity"/>
         <activity android:name=".contents.PermissionActivity"/>
         <activity android:name=".views.UiVisibilityActivity"/>
-        <activity android:name=".contents.AnimationsActivity"/>
         <activity android:name=".views.InflateLayoutActivity"/>
         <activity android:name=".views.ViewLocationActivity"/>
         <activity
