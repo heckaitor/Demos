@@ -33,6 +33,5 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile project(path: ':bezier')
     compile project(path: ':interceptradio')
-    compile project(path: ':interceptradio')
     compile 'com.android.support:cardview-v7:24.2.1'
 }

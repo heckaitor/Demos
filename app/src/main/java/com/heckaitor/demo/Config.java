@@ -1,10 +1,16 @@
 package com.heckaitor.demo;
 
+import com.heckaitor.demo.contents.AnimationsActivity;
 import com.heckaitor.demo.contents.PermissionActivity;
+import com.heckaitor.demo.contents.ViewPagerActivity;
 import com.heckaitor.demo.contents.asyncdialog.AsyncTaskActivity;
 import com.heckaitor.demo.views.ImageScaleActivity;
-import com.heckaitor.demo.views.bezier.BezierActivity;
+import com.heckaitor.demo.views.UiVisibilityActivity;
+import com.heckaitor.demo.views.ViewStubActivity;
+import com.heckaitor.demo.views.BezierActivity;
+import com.heckaitor.demo.views.InflateLayoutActivity;
 import com.heckaitor.demo.views.interceptradio.InterceptRadioActivity;
+import com.heckaitor.demo.views.ViewLocationActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -57,12 +63,18 @@ public class Config {
         viewDemos.add(new DemoDesc("Bezier曲线", "通过一组固定的点绘制bezier曲线", BezierActivity.class));
         viewDemos.add(new DemoDesc("Intercept RadioButton", "在普通单选按钮的基础上，增加了选项变更的拦截操作", InterceptRadioActivity.class));
         viewDemos.add(new DemoDesc("ImageView.ScaleType", "实际体验ImageView设置不同的scaleType的效果", ImageScaleActivity.class));
+        viewDemos.add(new DemoDesc("SystemUiVisibility", "体验View.setSystemUiVisibility的效果，控制界面状态栏、导航栏、沉浸式效果", UiVisibilityActivity.class));
+        viewDemos.add(new DemoDesc("LayoutInflate & merge", "你真的会用merge吗？", InflateLayoutActivity.class));
+        viewDemos.add(new DemoDesc("View Location", "你真的会用getLocationInScreen？", ViewLocationActivity.class));
+        viewDemos.add(new DemoDesc("View Stub", "ViewStub使用过程的一些坑", ViewStubActivity.class));
         mEntrances.put(Category.VIEW, viewDemos);
         
         
         final List contentDemos = new ArrayList();
         contentDemos.add(new DemoDesc("AlterDialog vs DialogFragment", "在异步任务中更新UI，验证使用Fragment的一些错误用法", AsyncTaskActivity.class));
         contentDemos.add(new DemoDesc("Runtime Permission", "运行时动态获取权限", PermissionActivity.class));
+        contentDemos.add(new DemoDesc("Animation Playground", "一些动画效果的实践", AnimationsActivity.class));
+        contentDemos.add(new DemoDesc("ViewPager", "ViewPager在使用过程中的坑", ViewPagerActivity.class));
         mEntrances.put(Category.CONTENT, contentDemos);
         
         

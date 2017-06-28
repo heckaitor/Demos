@@ -1,4 +1,4 @@
-package com.heckaitor.demo.views.bezier;
+package com.heckaitor.demo.views;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -14,16 +14,25 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <activity android:name=".views.bezier.BezierActivity"/>
+        <activity android:name=".views.BezierActivity"/>
         <activity android:name=".views.interceptradio.InterceptRadioActivity"/>
         <activity android:name=".views.ImageScaleActivity"/>
         <activity android:name=".contents.asyncdialog.AsyncTaskActivity"/>
         <activity android:name=".contents.PermissionActivity"/>
-
+        <activity android:name=".views.UiVisibilityActivity"/>
+        <activity android:name=".contents.AnimationsActivity"/>
+        <activity android:name=".views.InflateLayoutActivity"/>
+        <activity android:name=".views.ViewLocationActivity"/>
+        <activity
+            android:name=".contents.ViewPagerActivity"
+            android:label="@string/title_activity_view_pager"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".views.ViewStubActivity"/>
     </application>
 
 </manifest>

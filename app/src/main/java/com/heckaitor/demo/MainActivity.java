@@ -3,24 +3,22 @@ package com.heckaitor.demo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.heckaitor.demo.common.DividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -125,13 +123,11 @@ public class MainActivity extends AppCompatActivity
         public DemoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_demo_layout, parent, false);
             DemoViewHolder holder = new DemoViewHolder(view);
-            Log.d(TAG, "onCreateViewHolder: " + holder);
             return holder;
         }
         
         @Override
         public void onBindViewHolder(DemoViewHolder holder, int position) {
-            Log.d(TAG, "onBindViewHolder: " + position + " -> " + holder);
             final Config.DemoDesc info = getItem(position);
             holder.titleView.setText(info != null ? info.title : "");
             holder.descView.setText(info != null ? info.desc : "");
@@ -163,7 +159,6 @@ public class MainActivity extends AppCompatActivity
         @Override
         public int getItemCount() {
             final int count = mList != null ? mList.size() : 0;
-            Log.d(TAG, "getItemCount: " + count);
             return count;
         }
         

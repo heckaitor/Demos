@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/flag_low_profile"
+        android:checked="false"
+        android:orderInCategory="100"
+        android:title="low profile"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/flag_hide_navigation"
+        android:orderInCategory="100"
+        android:title="hide navigation"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/flag_fullscreen"
+        android:orderInCategory="100"
+        android:title="fullscreen"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/flag_layout_stable"
+        android:orderInCategory="100"
+        android:title="layout stable"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/flag_layout_hide_navigation"
+        android:orderInCategory="100"
+        android:title="layout hide navigation"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/flag_layout_fullscreen"
+        android:orderInCategory="100"
+        android:title="layout fullscreen"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/flag_immersive"
+        android:orderInCategory="100"
+        android:title="immersive"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/flag_immersive_sticky"
+        android:orderInCategory="100"
+        android:title="immersive sticky"
+        app:showAsAction="never"/>
+
+</menu>
