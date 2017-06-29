@@ -3,6 +3,7 @@ package com.heckaitor.demo;
 import com.heckaitor.demo.contents.PermissionActivity;
 import com.heckaitor.demo.contents.ViewPagerActivity;
 import com.heckaitor.demo.contents.asyncdialog.AsyncTaskActivity;
+import com.heckaitor.demo.contents.popw.PopupWindowActivity;
 import com.heckaitor.demo.views.ImageScaleActivity;
 import com.heckaitor.demo.views.UiVisibilityActivity;
 import com.heckaitor.demo.views.ViewStubActivity;
@@ -73,6 +74,7 @@ public class Config {
         contentDemos.add(new DemoDesc("AlterDialog vs DialogFragment", "在异步任务中更新UI，验证使用Fragment的一些错误用法", AsyncTaskActivity.class));
         contentDemos.add(new DemoDesc("Runtime Permission", "运行时动态获取权限", PermissionActivity.class));
         contentDemos.add(new DemoDesc("ViewPager", "ViewPager在使用过程中的坑", ViewPagerActivity.class));
+        contentDemos.add(new DemoDesc("PopupWindow", "PopupWindow的坑", PopupWindowActivity.class));
         mEntrances.put(Category.CONTENT, contentDemos);
         
         

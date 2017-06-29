@@ -5,6 +5,6 @@
         android:width="3dp"
         android:color="#FF0000"/>
 
-    <solid android:color="#0000FF"/>
+    <solid android:color="@color/colorPrimary"/>
 
 </shape>
