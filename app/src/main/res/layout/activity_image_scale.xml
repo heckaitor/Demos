@@ -8,20 +8,112 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/iv_big_even"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/darker_gray"
-        android:src="@drawable/tiny"
+        android:src="@drawable/big_even"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="View: 100x100\nImage:200x200"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_big_even"
+        app:layout_constraintRight_toRightOf="@+id/iv_big_even"
+        app:layout_constraintTop_toBottomOf="@+id/iv_big_even"/>
+
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/iv_small_even"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/darker_gray"
+        android:src="@drawable/small_even"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="View: 100x100\nImage:200x150"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_big_fat"
+        app:layout_constraintRight_toRightOf="@+id/iv_big_fat"
+        app:layout_constraintTop_toBottomOf="@+id/iv_big_fat"/>
+
+    <ImageView
+        android:id="@+id/iv_small_fat"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/darker_gray"
+        android:src="@drawable/small_fat"
+        app:layout_constraintLeft_toRightOf="@+id/iv_big_even"
+        app:layout_constraintRight_toLeftOf="@+id/iv_big_thin"
+        app:layout_constraintHorizontal_bias="0.489"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="View: 100x100\nImage:150x200"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_big_thin"
+        app:layout_constraintRight_toRightOf="@+id/iv_big_thin"
+        app:layout_constraintTop_toBottomOf="@+id/iv_big_thin"/>
+
+    <ImageView
+        android:id="@+id/iv_small_thin"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@android:color/darker_gray"
+        android:src="@drawable/small_thin"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="View: 100x100\nImage:50x50"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_small_even"
+        app:layout_constraintRight_toRightOf="@+id/iv_small_even"
+        app:layout_constraintTop_toBottomOf="@+id/iv_small_even"/>
+
+    <ImageView
+        android:id="@+id/iv_big_fat"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="16dp"
@@ -30,31 +122,53 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/darker_gray"
-        android:src="@drawable/fat"
-        app:layout_constraintLeft_toRightOf="@+id/imageView1"
-        app:layout_constraintRight_toLeftOf="@+id/imageView3"
+        android:src="@drawable/big_fat"
+        app:layout_constraintLeft_toRightOf="@+id/iv_big_even"
+        app:layout_constraintRight_toLeftOf="@+id/iv_big_thin"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="View: 100x100\nImage:200x50"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_small_fat"
+        app:layout_constraintRight_toRightOf="@+id/iv_small_fat"
+        app:layout_constraintTop_toBottomOf="@+id/iv_small_fat"/>
+
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/iv_big_thin"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/darker_gray"
-        android:src="@drawable/thin"
+        android:src="@drawable/big_thin"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="View: 100x100\nImage:50x200"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_small_thin"
+        app:layout_constraintRight_toRightOf="@+id/iv_small_thin"
+        app:layout_constraintTop_toBottomOf="@+id/iv_small_thin"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="176dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="176dp"/>
+        app:layout_constraintGuide_end="286dp"/>
 
     <TextView
         android:id="@+id/typeView"

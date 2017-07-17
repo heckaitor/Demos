@@ -8,7 +8,7 @@ import android.widget.RadioButton;
  * 在普通单选按钮的基础上，增加了选项变更的拦截操作，
  * 在选项真正变更之前进行必要的处理，并决定最终是否真正进行选项变更
  *
- * Created by kaige1 on 16/9/6.
+ * Created by heckaitor on 16/9/6.
  */
 public class InterceptedRadioButton extends RadioButton {
 

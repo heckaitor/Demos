@@ -20,7 +20,7 @@ import java.util.Map;
 /**
  * 所有demo的入口配置
  *
- * Created by kaige1 on 2017/5/25.
+ * Created by heckaitor on 2017/5/25.
  */
 public class Config {
     
@@ -32,7 +32,7 @@ public class Config {
     
     /**
      * Demo信息
-     * Created by kaige1 on 2017/5/25.
+     * Created by heckaitor on 2017/5/25.
      */
     static class DemoDesc {
         

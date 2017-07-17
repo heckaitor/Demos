@@ -8,9 +8,6 @@ import android.view.View;
 
 import com.heckaitor.demo.R;
 
-/**
- * Created by kaige1 on 2017/6/12.
- */
 public class ViewLocationActivity extends AppCompatActivity {
     
     @Override

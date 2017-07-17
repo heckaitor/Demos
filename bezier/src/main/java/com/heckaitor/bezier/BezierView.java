@@ -20,7 +20,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 /**
  * 在平面上，通过给定的一组点，绘制Bezier曲线
  *
- * Created by kaige1 on 16/8/18.
+ * Created by heckaitor on 16/8/18.
  */
 public class BezierView extends View {
 

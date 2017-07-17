@@ -25,7 +25,7 @@ import com.heckaitor.interceptradio.InterceptedRadioButton;
  * 让调用方有机会在选项变更之前进行处理
  * </p>
  *
- * Created by kaige1 on 16/9/6.
+ * Created by heckaitor on 16/9/6.
  */
 public class InterceptRadioActivity extends AppCompatActivity {
 

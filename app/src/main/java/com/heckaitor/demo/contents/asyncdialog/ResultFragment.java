@@ -6,10 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 
-/**
- * Created by kaige1 on 2016/10/17.
- */
-
 public class ResultFragment extends DialogFragment {
 	public static final String TAG = ResultFragment.class.getSimpleName();
 	private static final String KEY_CONTENT = "CONTENT";

@@ -26,6 +26,7 @@ public class LoadingFragment extends DialogFragment {
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
 		dialog = new ProgressDialog(getContext());
 		dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+		dialog.setCanceledOnTouchOutside(false);
 		dialog.setMax(100);
 		if (onKeyListener != null) {
 			dialog.setOnKeyListener(onKeyListener);

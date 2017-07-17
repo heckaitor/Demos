@@ -48,9 +48,8 @@ import java.util.List;
  *     </li>
  * </ul>
  *
- * Created by kaige1 on 2016/10/17.
+ * Created by heckaitor on 2016/10/17.
  */
-
 public class MainActivity extends FragmentActivity implements View.OnClickListener {
 
 	private static final String TAG = MainActivity.class.getSimpleName();

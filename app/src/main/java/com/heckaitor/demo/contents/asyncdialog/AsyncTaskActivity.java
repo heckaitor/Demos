@@ -3,6 +3,7 @@ package com.heckaitor.demo.contents.asyncdialog;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -51,9 +52,8 @@ import java.util.List;
  *     </li>
  * </ul>
  *
- * Created by kaige1 on 2016/10/17.
+ * Created by heckaitor on 2016/10/17.
  */
-
 public class AsyncTaskActivity extends AppCompatActivity implements View.OnClickListener {
 
 	private static final String TAG = AsyncTaskActivity.class.getSimpleName();
@@ -90,8 +90,14 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
 		Log.v(TAG, "onStop: ");
 		isStopped = true;
 	}
-
-	@Override
+    
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Log.v(TAG, "onConfigurationChanged: " + newConfig);
+    }
+    
+    @Override
 	public void onClick(View v) {
 		if (R.id.btnLoadWithDialog == v.getId()) {
 			if (taskWithDialog != null && taskWithDialog.getStatus() == AsyncTask.Status.RUNNING) {
@@ -140,6 +146,7 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
 				loadingDialog = new ProgressDialog(wrActivity.get());
 				loadingDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 				loadingDialog.setMax(100);
+				loadingDialog.setCanceledOnTouchOutside(false);
 				loadingDialog.setCancelable(true);
 				loadingDialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
 					@Override

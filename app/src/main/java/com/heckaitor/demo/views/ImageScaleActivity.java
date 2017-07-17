@@ -9,21 +9,26 @@ import android.widget.TextView;
 
 import com.heckaitor.demo.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class ImageScaleActivity extends AppCompatActivity {
 
-	private ImageView tinyView, thinView, fatView;
-	private TextView typeView, descView;
+    @BindView(R.id.iv_big_even) ImageView mBigEvenView;
+    @BindView(R.id.iv_big_fat) ImageView mBigFatView;
+    @BindView(R.id.iv_big_thin) ImageView mBigThinView;
+    @BindView(R.id.iv_small_even) ImageView mSmallEvenView;
+    @BindView(R.id.iv_small_fat) ImageView mSmallFatView;
+    @BindView(R.id.iv_small_thin) ImageView mSmallThinView;
+	
+    @BindView(R.id.typeView) TextView mTypeView;
+    @BindView(R.id.descView) TextView mDescView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_image_scale);
-
-		tinyView = (ImageView) findViewById(R.id.imageView1);
-		fatView = (ImageView) findViewById(R.id.imageView2);
-		thinView = (ImageView) findViewById(R.id.imageView3);
-		typeView = (TextView) findViewById(R.id.typeView);
-		descView = (TextView) findViewById(R.id.descView);
+        ButterKnife.bind(this);
 
 		// ImageView的默认scale type：fitCenter
 		updateScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -68,11 +73,15 @@ public class ImageScaleActivity extends AppCompatActivity {
 	}
 
 	private void updateScaleType(ImageView.ScaleType type) {
-		tinyView.setScaleType(type);
-		thinView.setScaleType(type);
-		fatView.setScaleType(type);
+		mBigEvenView.setScaleType(type);
+		mBigFatView.setScaleType(type);
+		mBigThinView.setScaleType(type);
+        
+        mSmallEvenView.setScaleType(type);
+        mSmallFatView.setScaleType(type);
+        mSmallThinView.setScaleType(type);
 
-		typeView.setText(type.toString());
+		mTypeView.setText(type.toString());
 		updateDesc(type);
 	}
 
@@ -108,6 +117,6 @@ public class ImageScaleActivity extends AppCompatActivity {
 				break;
 		}
 
-		descView.setText(text);
+		mDescView.setText(text);
 	}
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_views"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="Views"/>
+    <item
+        android:id="@+id/nav_content"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Content"/>
+
+    <item
+        android:id="@+id/nav_tools"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="Tools"/>
+
+</menu>
