@@ -50,7 +50,7 @@ public class InflateLayoutActivity extends AppCompatActivity {
             // inflate时传入root=this，attachToRoot=true，会将merge标签中所有的子View添加到当前View中
             // 1. 这样可以避免自定义View时，无意中多引入的一层
             // 2. 布局中对merge的属性设置不会生效，需要在代码中设置
-            LayoutInflater.from(getContext()).inflate(R.layout.layout_merge, this, true);
+            LayoutInflater.from(getContext()).inflate(R.layout.view_layout_merge, this, true);
             setOrientation(VERTICAL);
             setBackgroundResource(R.drawable.background);
             ButterKnife.bind(this);

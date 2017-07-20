@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.heckaitor.demo.contents.touch.CustomLayout
+    android:id="@+id/cl_outer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="50dp">
+
+    <com.heckaitor.demo.contents.touch.CustomLayout
+        android:id="@+id/cl_middle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#40000000"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <com.heckaitor.demo.contents.touch.CustomView
+            android:id="@+id/cv_inner_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#60000000"
+            android:text="View 1"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.heckaitor.demo.contents.touch.CustomView
+            android:id="@+id/cv_inner_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#60000000"
+            android:text="View 2"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+
+    </com.heckaitor.demo.contents.touch.CustomLayout>
+
+</com.heckaitor.demo.contents.touch.CustomLayout>

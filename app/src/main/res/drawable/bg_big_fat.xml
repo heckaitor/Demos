@@ -3,10 +3,10 @@
 
     <size
         android:width="200dp"
-        android:height="50dp"/>
+        android:height="150dp"/>
 
     <stroke
-        android:width="3dp"
+        android:width="5dp"
         android:color="#FF0000"/>
 
     <solid android:color="#0000FF"/>

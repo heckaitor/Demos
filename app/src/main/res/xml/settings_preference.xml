@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory>
+        <SwitchPreference
+            android:key="terminal_log_enable"
+            android:persistent="true"
+            android:title="logcat"/>
+
+        <SwitchPreference
+            android:key="window_log_enable"
+            android:persistent="true"
+            android:title="调试窗口"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

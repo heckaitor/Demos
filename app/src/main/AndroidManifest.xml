@@ -14,25 +14,28 @@
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name=".views.BezierActivity"/>
         <activity android:name=".views.interceptradio.InterceptRadioActivity"/>
         <activity android:name=".views.ImageScaleActivity"/>
-        <activity android:name=".contents.asyncdialog.AsyncTaskActivity"
+        <activity
+            android:name=".contents.asyncdialog.AsyncTaskActivity"
             android:configChanges="orientation|screenSize"/>
         <activity android:name=".contents.PermissionActivity"/>
         <activity android:name=".views.UiVisibilityActivity"/>
         <activity android:name=".views.InflateLayoutActivity"/>
-        <activity android:name=".views.ViewLocationActivity"/>
-        <activity
-            android:name=".contents.ViewPagerActivity"
-            android:label="@string/title_activity_view_pager"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
         <activity android:name=".views.ViewStubActivity"/>
         <activity android:name=".contents.popw.PopupWindowActivity"/>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings">
+        </activity>
+        <activity android:name=".contents.touch.TouchDelegateActivity"
+            android:label="@string/title_activity_touch_delegate">
+        </activity>
     </application>
 
 </manifest>
