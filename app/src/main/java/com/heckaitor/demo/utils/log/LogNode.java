@@ -1,7 +1,5 @@
 package com.heckaitor.demo.utils.log;
 
-import android.text.TextUtils;
-
 import com.heckaitor.demo.utils.log.LogNodeFactory.LoggerType;
 
 import java.io.PrintWriter;
@@ -13,16 +11,13 @@ public abstract class LogNode implements Loggable {
     private LogNode mNext;
     
     @Override
-    public void log(int priority, Object tag, Throwable throwable, String... messages) {
-        final String TAG = generateTag(tag);
+    public void log(int priority, Object caller, Throwable throwable, Object... messages) {
+        final String TAG = generateTag(caller);
         StringBuilder builder = new StringBuilder(getStackTraceString(throwable));
         if (messages != null) {
             for (int i = 0; i < messages.length; i++) {
-                final String message = messages[i];
-                if (!TextUtils.isEmpty(message)) {
-                    builder.append(message);
-                }
-                
+                final Object message = messages[i];
+                builder.append(message);
                 if (i < messages.length - 1) {
                     builder.append(" -> ");
                 }
@@ -51,13 +46,14 @@ public abstract class LogNode implements Loggable {
     
     public abstract void destroySelf();
     
-    private String generateTag(Object tag) {
-        final String tagString = tag != null ? tag.getClass().getSimpleName() : "";
-        return tagString + "(" + attachThreadId() + ")";
-    }
-    
-    private String attachThreadId() {
-        return String.valueOf(Thread.currentThread().getId());
+    /**
+     * callerClassName(threadId)
+     * @param caller
+     * @return
+     */
+    private String generateTag(Object caller) {
+        final String tagString = caller != null ? caller.getClass().getSimpleName() : "null";
+        return tagString + "(" + Thread.currentThread().getId() + ")";
     }
     
     private String getStackTraceString(Throwable throwable) {

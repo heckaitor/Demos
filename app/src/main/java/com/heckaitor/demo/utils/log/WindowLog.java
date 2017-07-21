@@ -20,6 +20,9 @@ import android.widget.TextView;
 
 import com.heckaitor.demo.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import static com.heckaitor.demo.utils.log.Logger.DEBUG;
 import static com.heckaitor.demo.utils.log.Logger.ERROR;
 import static com.heckaitor.demo.utils.log.Logger.INFO;
@@ -80,6 +83,8 @@ public class WindowLog extends LogNode {
     private View mView;
     private TextView mLogView;
     
+    private SimpleDateFormat mFormatter;
+    
     @Override
     public void print(int priority, String tag, String message) {
         if (mLogView == null) {
@@ -87,6 +92,7 @@ public class WindowLog extends LogNode {
         }
     
         SpannableStringBuilder builder = new SpannableStringBuilder("\n");
+        builder.append(currentTimeString()).append(" ");
         appendNotNull(builder, tag);
         builder.append(": ");
         appendNotNull(builder, message);
@@ -96,6 +102,13 @@ public class WindowLog extends LogNode {
         builder.setSpan(new ForegroundColorSpan(color), 0, length, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         
         mLogView.append(builder);
+    }
+    
+    private String currentTimeString() {
+        if (mFormatter == null) {
+            mFormatter = new SimpleDateFormat("MM-dd HH:mm:ss.SSS");
+        }
+        return mFormatter.format(System.currentTimeMillis());
     }
     
     private void appendNotNull(SpannableStringBuilder builder, String text) {

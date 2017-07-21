@@ -14,29 +14,29 @@ public class Logger {
     public static final int WARN    = 5;
     public static final int ERROR   = 6;
     
-    public static void v(Object tag, String... messages) {
-        print(VERBOSE, tag, null, messages);
+    public static void v(Object caller, Object... messages) {
+        print(VERBOSE, caller, null, messages);
     }
     
-    public static void d(Object tag, String... messages) {
-        print(DEBUG, tag, null, messages);
+    public static void d(Object caller, Object... messages) {
+        print(DEBUG, caller, null, messages);
     }
     
-    public static void i(Object tag, String... messages) {
-        print(INFO, tag, null, messages);
+    public static void i(Object caller, Object... messages) {
+        print(INFO, caller, null, messages);
     }
     
-    public static void w(Object tag, String... messages) {
-        print(WARN, tag, null, messages);
+    public static void w(Object caller, Object... messages) {
+        print(WARN, caller, null, messages);
     }
     
-    public static void e(Object tag, Throwable throwable, String... messages) {
-        print(ERROR, tag, throwable, messages);
+    public static void e(Object caller, Throwable throwable, Object... messages) {
+        print(ERROR, caller, throwable, messages);
     }
     
-    private static void print(int priority, Object tag, Throwable throwable, String... messages) {
+    private static void print(int priority, Object caller, Throwable throwable, Object... messages) {
         if (mNode != null) {
-            mNode.log(priority, tag, throwable, messages);
+            mNode.log(priority, caller, throwable, messages);
         }
     }
     
