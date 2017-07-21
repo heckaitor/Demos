@@ -5,6 +5,7 @@ import com.heckaitor.demo.contents.asyncdialog.AsyncTaskActivity;
 import com.heckaitor.demo.contents.popw.PopupWindowActivity;
 import com.heckaitor.demo.contents.touch.TouchDelegateActivity;
 import com.heckaitor.demo.views.ImageScaleActivity;
+import com.heckaitor.demo.views.RecyclerViewActivity;
 import com.heckaitor.demo.views.UiVisibilityActivity;
 import com.heckaitor.demo.views.ViewStubActivity;
 import com.heckaitor.demo.views.BezierActivity;
@@ -65,6 +66,7 @@ public class Config {
         viewDemos.add(new DemoDesc("SystemUiVisibility", "体验View.setSystemUiVisibility的效果，控制界面状态栏、导航栏、沉浸式效果", UiVisibilityActivity.class));
         viewDemos.add(new DemoDesc("LayoutInflate & merge", "你真的会用merge吗？", InflateLayoutActivity.class));
         viewDemos.add(new DemoDesc("View Stub", "ViewStub使用过程的一些坑", ViewStubActivity.class));
+        viewDemos.add(new DemoDesc("RecyclerView", "疑难杂症", RecyclerViewActivity.class));
         mEntrances.put(Category.VIEW, viewDemos);
         
         

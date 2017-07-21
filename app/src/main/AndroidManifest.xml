@@ -33,8 +33,11 @@
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings">
         </activity>
-        <activity android:name=".contents.touch.TouchDelegateActivity"
+        <activity
+            android:name=".contents.touch.TouchDelegateActivity"
             android:label="@string/title_activity_touch_delegate">
+        </activity>
+        <activity android:name=".views.RecyclerViewActivity">
         </activity>
     </application>
 
