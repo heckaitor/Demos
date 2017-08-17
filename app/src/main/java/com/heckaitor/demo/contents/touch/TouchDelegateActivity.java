@@ -33,7 +33,7 @@ public class TouchDelegateActivity extends AppCompatActivity {
         mInnerView1.setTag("inner1");
         mInnerView2.setTag("inner2");
     }
-    
+
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);

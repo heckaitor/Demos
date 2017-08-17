@@ -5,8 +5,10 @@ import com.heckaitor.demo.contents.asyncdialog.AsyncTaskActivity;
 import com.heckaitor.demo.contents.popw.PopupWindowActivity;
 import com.heckaitor.demo.contents.touch.TouchDelegateActivity;
 import com.heckaitor.demo.views.ImageScaleActivity;
+import com.heckaitor.demo.views.ListViewActivity;
 import com.heckaitor.demo.views.RecyclerViewActivity;
 import com.heckaitor.demo.views.UiVisibilityActivity;
+import com.heckaitor.demo.views.ViewCoordinateActivity;
 import com.heckaitor.demo.views.ViewStubActivity;
 import com.heckaitor.demo.views.BezierActivity;
 import com.heckaitor.demo.views.InflateLayoutActivity;
@@ -66,15 +68,17 @@ public class Config {
         viewDemos.add(new DemoDesc("SystemUiVisibility", "体验View.setSystemUiVisibility的效果，控制界面状态栏、导航栏、沉浸式效果", UiVisibilityActivity.class));
         viewDemos.add(new DemoDesc("LayoutInflate & merge", "你真的会用merge吗？", InflateLayoutActivity.class));
         viewDemos.add(new DemoDesc("View Stub", "ViewStub使用过程的一些坑", ViewStubActivity.class));
-        viewDemos.add(new DemoDesc("RecyclerView", "疑难杂症", RecyclerViewActivity.class));
+        viewDemos.add(new DemoDesc("View Coordinate", "View坐标系", ViewCoordinateActivity.class));
         mEntrances.put(Category.VIEW, viewDemos);
-        
-        
+
+
         final List contentDemos = new ArrayList();
         contentDemos.add(new DemoDesc("AlterDialog vs DialogFragment", "在异步任务中更新UI，验证使用Fragment的一些错误用法", AsyncTaskActivity.class));
         contentDemos.add(new DemoDesc("Runtime Permission", "运行时动态获取权限", PermissionActivity.class));
         contentDemos.add(new DemoDesc("PopupWindow", "PopupWindow的坑", PopupWindowActivity.class));
         contentDemos.add(new DemoDesc("TouchDelegate", "一般用于在不改变布局的情况下，扩大View的点击区域，但并不常用，而且使用过程中会有一些容易被忽略的问题", TouchDelegateActivity.class));
+        contentDemos.add(new DemoDesc("RecyclerView", "疑难杂症", RecyclerViewActivity.class));
+        contentDemos.add(new DemoDesc("ListView", "疑难杂症", ListViewActivity.class));
         mEntrances.put(Category.CONTENT, contentDemos);
         
         
