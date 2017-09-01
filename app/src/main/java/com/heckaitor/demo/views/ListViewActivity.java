@@ -1,7 +1,7 @@
 package com.heckaitor.demo.views;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
@@ -11,15 +11,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.heckaitor.demo.R;
+import com.heckaitor.demo.utils.StringUtils;
 import com.heckaitor.demo.utils.log.Logger;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.widget.AbsListView.OnScrollListener.SCROLL_STATE_FLING;
-import static android.widget.AbsListView.OnScrollListener.SCROLL_STATE_IDLE;
-import static android.widget.AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL;
 
 public class ListViewActivity extends AppCompatActivity {
 
@@ -59,13 +56,13 @@ public class ListViewActivity extends AppCompatActivity {
 
         @Override
         public void onScrollStateChanged(AbsListView view, int scrollState) {
-            Logger.i(this, "origin", "onScrollStateChanged", scrollState2String(scrollState));
+            //Logger.i(this, "origin", "onScrollStateChanged", scrollState2String(scrollState));
         }
 
         @Override
         public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
             if (firstVisibleItem != mOldFirstVisibleItem) {
-                Logger.v(this, "origin", "onScroll", "first = " + firstVisibleItem);
+                //Logger.v(this, "origin", "onScroll", "first = " + firstVisibleItem);
                 mOldFirstVisibleItem = firstVisibleItem;
             }
         }
@@ -85,7 +82,7 @@ public class ListViewActivity extends AppCompatActivity {
             if (mOrigin != null) {
                 mOrigin.onScrollStateChanged(view, scrollState);
             }
-            Logger.i(this, "proxy", "onScrollStateChanged", scrollState2String(scrollState));
+            //Logger.i(this, "proxy", "onScrollStateChanged", scrollState2String(scrollState));
         }
 
         @Override
@@ -94,18 +91,9 @@ public class ListViewActivity extends AppCompatActivity {
                 mOrigin.onScroll(view, firstVisibleItem, visibleItemCount, totalItemCount);
             }
             if (firstVisibleItem != mOldFirstVisibleItem) {
-                Logger.v(this, "proxy", "onScroll", "first = " + firstVisibleItem);
+                //Logger.v(this, "proxy", "onScroll", "first = " + firstVisibleItem);
                 mOldFirstVisibleItem = firstVisibleItem;
             }
-        }
-    }
-
-    private static String scrollState2String(int state) {
-        switch (state) {
-            case SCROLL_STATE_TOUCH_SCROLL: return "SCROLL_STATE_TOUCH_SCROLL";
-            case SCROLL_STATE_FLING: return "SCROLL_STATE_FLING";
-            case SCROLL_STATE_IDLE: return "SCROLL_STATE_IDLE";
-            default: return "unknown";
         }
     }
 
@@ -138,9 +126,13 @@ public class ListViewActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+            final String tag = convertView != null ? (String) convertView.getTag(R.id.view_tag) : "null";
+            Logger.d(ListViewActivity.this, "getView", String.valueOf(position), "reuse = " + StringUtils.commonToString(convertView) + ", " + tag);
+
             ContentViewHolder holder;
             if (convertView == null) {
                 convertView = getLayoutInflater().inflate(R.layout.item_imge_text, parent, false);
+                convertView.addOnAttachStateChangeListener(mAttachStateListener);
                 holder = new ContentViewHolder(convertView);
                 convertView.setTag(holder);
             } else {
@@ -149,6 +141,7 @@ public class ListViewActivity extends AppCompatActivity {
 
             holder.imageView.setImageResource(R.mipmap.ic_launcher);
             holder.textView.setText(data.get(position));
+            convertView.setTag(R.id.view_tag, data.get(position));
 
             return convertView;
         }
@@ -162,5 +155,17 @@ public class ListViewActivity extends AppCompatActivity {
                 textView = (TextView) view.findViewById(R.id.tv_text);
             }
         }
+
+        private View.OnAttachStateChangeListener mAttachStateListener = new View.OnAttachStateChangeListener() {
+            @Override
+            public void onViewAttachedToWindow(View v) {
+                Logger.v(ListViewActivity.this, "onViewAttachedToWindow", StringUtils.commonToString(v), v.getTag(R.id.view_tag));
+            }
+
+            @Override
+            public void onViewDetachedFromWindow(View v) {
+                Logger.w(ListViewActivity.this, "onViewDetachedFromWindow", StringUtils.commonToString(v), v.getTag(R.id.view_tag));
+            }
+        };
     }
 }
