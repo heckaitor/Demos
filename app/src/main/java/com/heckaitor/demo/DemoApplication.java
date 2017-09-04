@@ -25,7 +25,7 @@ public class DemoApplication extends Application {
         }
         LeakCanary.install(this);
         
-        //registerActivityLifecycleCallbacks(mInnerActivityLifecycleCallback);
+        registerActivityLifecycleCallbacks(mInnerActivityLifecycleCallback);
         initLogger();
     }
     

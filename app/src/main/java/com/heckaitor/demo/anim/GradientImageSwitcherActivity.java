@@ -1,4 +1,4 @@
-package com.heckaitor.demo.views;
+package com.heckaitor.demo.anim;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class AnimateActivity extends AppCompatActivity {
+public class GradientImageSwitcherActivity extends AppCompatActivity {
 
     @BindView(R.id.giv_image)
     GradientImageView mView;
@@ -21,7 +21,7 @@ public class AnimateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animate);
+        setContentView(R.layout.activity_gradient_image_switcher);
         ButterKnife.bind(this);
     }
 

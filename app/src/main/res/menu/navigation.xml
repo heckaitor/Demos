@@ -5,6 +5,11 @@
         android:id="@+id/nav_views"
         android:icon="@drawable/ic_menu_gallery"
         android:title="Views"/>
+
+    <item
+        android:id="@+id/nav_animates"
+        android:icon="@drawable/ic_menu_share"
+        android:title="Animates"/>
     <item
         android:id="@+id/nav_content"
         android:icon="@drawable/ic_menu_slideshow"

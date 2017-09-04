@@ -4,7 +4,7 @@ import com.heckaitor.demo.contents.PermissionActivity;
 import com.heckaitor.demo.contents.asyncdialog.AsyncTaskActivity;
 import com.heckaitor.demo.contents.popw.PopupWindowActivity;
 import com.heckaitor.demo.contents.touch.TouchDelegateActivity;
-import com.heckaitor.demo.views.AnimateActivity;
+import com.heckaitor.demo.anim.GradientImageSwitcherActivity;
 import com.heckaitor.demo.views.ImageScaleActivity;
 import com.heckaitor.demo.views.ListViewActivity;
 import com.heckaitor.demo.views.RecyclerViewActivity;
@@ -29,6 +29,7 @@ public class Config {
     
     enum Category {
         VIEW,
+        ANIMATES,
         CONTENT,
         TOOL
     }
@@ -70,8 +71,12 @@ public class Config {
         viewDemos.add(new DemoDesc("LayoutInflate & merge", "你真的会用merge吗？", InflateLayoutActivity.class));
         viewDemos.add(new DemoDesc("View Stub", "ViewStub使用过程的一些坑", ViewStubActivity.class));
         viewDemos.add(new DemoDesc("View Coordinate", "View坐标系", ViewCoordinateActivity.class));
-        viewDemos.add(new DemoDesc("动画", "动画", AnimateActivity.class));
         mEntrances.put(Category.VIEW, viewDemos);
+
+        final List animateDemos = new ArrayList();
+        animateDemos.add(new DemoDesc("ImageView切换动画", "ImageView切换图片时，与上一张重叠渐隐", GradientImageSwitcherActivity.class));
+
+        mEntrances.put(Category.ANIMATES, animateDemos);
 
 
         final List contentDemos = new ArrayList();
