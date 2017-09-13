@@ -1,5 +1,6 @@
 package com.heckaitor.demo;
 
+import com.heckaitor.demo.anim.AlphaControlActivity;
 import com.heckaitor.demo.contents.PermissionActivity;
 import com.heckaitor.demo.contents.asyncdialog.AsyncTaskActivity;
 import com.heckaitor.demo.contents.popw.PopupWindowActivity;
@@ -75,7 +76,7 @@ public class Config {
 
         final List animateDemos = new ArrayList();
         animateDemos.add(new DemoDesc("ImageView切换动画", "ImageView切换图片时，与上一张重叠渐隐", GradientImageSwitcherActivity.class));
-
+        animateDemos.add(new DemoDesc("动画控制", "", AlphaControlActivity.class));
         mEntrances.put(Category.ANIMATES, animateDemos);
 
 

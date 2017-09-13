@@ -79,6 +79,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
         });
     }
 
+    private void scrollToItem(int position) {
+        mView.smoothScrollToPosition(position);
+    }
+
     private TextView createSimpleTextView(String text) {
         TextView view = new TextView(this);
         view.setGravity(Gravity.CENTER);
@@ -103,11 +107,12 @@ public class RecyclerViewActivity extends AppCompatActivity {
         public ContentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             final AspectRatioLayout view = (AspectRatioLayout) getLayoutInflater().inflate(R.layout.item_imge_text, parent, false);
             view.addOnAttachStateChangeListener(mAttachStateListener);
-            ContentViewHolder holder = new ContentViewHolder(view);
-            holder.imageView.setOnClickListener(new View.OnClickListener() {
+            final ContentViewHolder holder = new ContentViewHolder(view);
+            view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    final int top = v.getTop() - 100;
+                    mView.smoothScrollBy(0, top);
                 }
             });
             Logger.v(RecyclerViewActivity.this, "onCreateViewHolder", commonToString(holder), commonToString(view));
@@ -122,16 +127,16 @@ public class RecyclerViewActivity extends AppCompatActivity {
             holder.textView.setText(data.get(position));
             holder.itemView.setTag("item " + position);
             holder.itemView.setBackgroundColor(position % 2 == 0 ? Color.LTGRAY : Color.WHITE);
-            ((AspectRatioLayout) holder.itemView).setRatio(mockRatio(position));
+            //((AspectRatioLayout) holder.itemView).setRatio(mockRatio(position));
         }
 
         private float mockRatio(int position) {
             final int index = position % 3;
             switch (index) {
                 case 0: return 0.56f;
-                case 1: return 1f;
-                case 2: return 1.78f;
-                default: return 1.8f;
+                //case 1: return 1f;
+                //case 2: return 1.78f;
+                default: return 1f;
             }
         }
     

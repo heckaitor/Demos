@@ -47,6 +47,8 @@
         </activity>
         <activity android:name=".anim.GradientImageSwitcherActivity">
         </activity>
+        <activity android:name=".anim.AlphaControlActivity">
+        </activity>
     </application>
 
 </manifest>

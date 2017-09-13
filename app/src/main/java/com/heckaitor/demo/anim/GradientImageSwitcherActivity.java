@@ -1,5 +1,6 @@
 package com.heckaitor.demo.anim;
 
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,7 +32,7 @@ public class GradientImageSwitcherActivity extends AppCompatActivity {
             mView.setImageResource(R.drawable.bg_big_thin);
             isRed = false;
         } else {
-            mView.setImageResource(R.drawable.red_pic);
+            mView.setImageResource(R.drawable.bg_small_fat);
             isRed = true;
         }
     }

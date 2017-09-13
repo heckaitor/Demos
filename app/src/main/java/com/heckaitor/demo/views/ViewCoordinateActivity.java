@@ -13,11 +13,12 @@ import com.heckaitor.demo.utils.log.Logger;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.heckaitor.demo.utils.ViewVisibilityHelper.calculateVisibilityPercents;
-import static com.heckaitor.demo.utils.ViewVisibilityHelper.isPartiallyHiddenBottom;
-import static com.heckaitor.demo.utils.ViewVisibilityHelper.isPartiallyHiddenLeft;
-import static com.heckaitor.demo.utils.ViewVisibilityHelper.isPartiallyHiddenRight;
-import static com.heckaitor.demo.utils.ViewVisibilityHelper.isPartiallyHiddenTop;
+import static com.heckaitor.demo.utils.ViewVisibilityHelper.calculateVisiblePercents;
+import static com.heckaitor.demo.utils.ViewVisibilityHelper.calculateVisiblePercentsWithTopOffset;
+import static com.heckaitor.demo.utils.ViewVisibilityHelper.isHiddenBottom;
+import static com.heckaitor.demo.utils.ViewVisibilityHelper.isHiddenLeft;
+import static com.heckaitor.demo.utils.ViewVisibilityHelper.isHiddenRight;
+import static com.heckaitor.demo.utils.ViewVisibilityHelper.isHiddenTop;
 
 /**
  * view坐标系
@@ -93,13 +94,14 @@ public class ViewCoordinateActivity extends AppCompatActivity {
     }
     
     private void calVisiblePercents(View view) {
-        final float percents = calculateVisibilityPercents(view);
+        //final float percents = calculateVisiblePercents(view);
+        final float percents = calculateVisiblePercentsWithTopOffset(view, getResources().getDimensionPixelSize(R.dimen.nav_header_height));
         if (percents != mVisiblePercents) {
             Logger.v(view, "visible percents = " + percents);
-            Logger.d(view, "side hidden:", "left:" + isPartiallyHiddenLeft(view)
-                    + ", top:" + isPartiallyHiddenTop(view)
-                    + ", right:" + isPartiallyHiddenRight(view)
-                    + ", bottom:" + isPartiallyHiddenBottom(view));
+            Logger.d(view, "side hidden:", "left:" + isHiddenLeft(view)
+                    + ", top:" + isHiddenTop(view)
+                    + ", right:" + isHiddenRight(view)
+                    + ", bottom:" + isHiddenBottom(view));
             mVisiblePercents = percents;
         }
     }

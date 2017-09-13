@@ -53,6 +53,11 @@ public class GradientImageView extends ImageView {
             return;
         }
 
+        if (getDrawable() == null) {
+            super.setImageDrawable(drawable);
+            return;
+        }
+
         mOriginalImage = getDrawable();
         mOriginalImageMatrix = new Matrix(getImageMatrix());
         super.setImageDrawable(drawable);
@@ -68,6 +73,11 @@ public class GradientImageView extends ImageView {
         }
 
         if (mAnimator.isRunning()) {
+            return;
+        }
+
+        if (getDrawable() == null) {
+            super.setImageResource(resId);
             return;
         }
 
