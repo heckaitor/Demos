@@ -3,6 +3,16 @@
 
     <declare-styleable name="AspectRatioLayout">
         <attr name="ratio" format="float"/>
+        <attr name="videoScalingMode">
+            <enum name="none" value="1"/>
+            <enum name="autoFit" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CountDownPlayButton">
+        <attr name="progressColor" format="color|reference"/>
+        <attr name="progressWidth" format="dimension|reference"/>
+        <attr name="duration" format="integer"/>
     </declare-styleable>
 
 </resources>

@@ -2,26 +2,18 @@ package com.heckaitor.demo.common;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 
 import com.heckaitor.demo.R;
 import com.heckaitor.demo.utils.StringUtils;
 import com.heckaitor.demo.utils.log.Logger;
 
-import static com.heckaitor.demo.utils.ViewUtils.measureMode2String;
-
 public class AspectRatioLayout extends FrameLayout {
 
     private float mRatio;
-
-    private View mSingleChildView;
+    private int mScalingMode;
 
     public AspectRatioLayout(Context context) {
         this(context, null);
@@ -31,13 +23,9 @@ public class AspectRatioLayout extends FrameLayout {
         super(context, attrs);
         final TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.AspectRatioLayout);
         mRatio = a.getFloat(R.styleable.AspectRatioLayout_ratio, 1.78f);
+        mScalingMode = a.getInt(R.styleable.AspectRatioLayout_videoScalingMode, 1);
+        mRatio = mScalingMode;
         a.recycle();
-
-        mSingleChildView = new View(context);
-        mSingleChildView.setBackgroundColor(Color.BLACK);
-        LayoutParams params = generateDefaultLayoutParams();
-        params.gravity = Gravity.CENTER;
-        addViewInLayout(mSingleChildView, 0, params, true);
     }
 
     @Override
@@ -56,11 +44,6 @@ public class AspectRatioLayout extends FrameLayout {
 
         if (widthMode == MeasureSpec.EXACTLY && widthSize > 0) {
             if (heightMode == MeasureSpec.EXACTLY && heightSize > 0) {
-                Logger.v(this, "onMeasure", "width = exactly, " + widthSize, "height = exactly, " + heightSize);
-                ViewGroup.LayoutParams params = mSingleChildView.getLayoutParams();
-                params.width = widthSize;
-                params.height = Math.round(widthSize / ratio);
-                Logger.d(this, "make child layout params", params.width + ", " + params.height);
                 super.onMeasure(widthMeasureSpec, heightMeasureSpec);
             } else {
                 final int height = Math.round(widthSize / ratio);
@@ -76,9 +59,14 @@ public class AspectRatioLayout extends FrameLayout {
 
     public void setRatio(float ratio) {
         if (ratio > 0 && ratio != mRatio) {
+            Logger.v(this, "setRatio", String.valueOf(ratio));
             mRatio = ratio;
-            invalidate();
+            requestLayout();
         }
+    }
+
+    public float getRatio() {
+        return mRatio;
     }
 
     @Override
