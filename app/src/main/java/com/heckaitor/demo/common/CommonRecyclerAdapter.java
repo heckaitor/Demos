@@ -205,7 +205,7 @@ public class CommonRecyclerAdapter extends RecyclerView.Adapter {
     @Override
     public void onViewAttachedToWindow(RecyclerView.ViewHolder holder) {
         super.onViewAttachedToWindow(holder);
-        mInnerAdapter.onViewAttachedToWindow(holder);
+        //mInnerAdapter.onViewAttachedToWindow(holder);
 
         // header, footer适配StaggeredGridLayoutManager
         final int position = holder.getLayoutPosition();

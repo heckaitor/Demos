@@ -1,7 +1,6 @@
 package com.heckaitor.demo.views;
 
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,13 +8,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.heckaitor.demo.R;
 import com.heckaitor.demo.common.AspectRatioLayout;
 import com.heckaitor.demo.common.CommonRecyclerAdapter;
 import com.heckaitor.demo.common.DividerItemDecoration;
+import com.heckaitor.demo.common.FixScrollRecyclerView;
 import com.heckaitor.demo.utils.ViewUtils;
 import com.heckaitor.demo.utils.log.Logger;
 
@@ -24,17 +27,26 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import static com.heckaitor.demo.common.DividerItemDecoration.VERTICAL_LIST;
 import static com.heckaitor.demo.utils.StringUtils.commonToString;
 
 public class RecyclerViewActivity extends AppCompatActivity {
+
+    private static final int DOCK_OFFSET = 0;
     
     @BindView(R.id.rv_content)
-    RecyclerView mView;
+    FixScrollRecyclerView mView;
     private CommonRecyclerAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    
+
+    @BindView(R.id.rg_smooth)
+    RadioGroup mSmoothSelectorView;
+
+    @BindView(R.id.et_index)
+    EditText mIndexView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,8 +91,20 @@ public class RecyclerViewActivity extends AppCompatActivity {
         });
     }
 
-    private void scrollToItem(int position) {
-        mView.smoothScrollToPosition(position);
+    @OnClick(R.id.btn_go)
+    public void scrollToPosition() {
+        final String strIndex = mIndexView.getText().toString();
+        try {
+            final int index = Integer.parseInt(strIndex);
+            final boolean smooth = mSmoothSelectorView.getCheckedRadioButtonId() == R.id.rb_smooth_scroll;
+            if (smooth) {
+                mView.smoothScrollToPositionWithOffset(index, DOCK_OFFSET);
+            } else {
+                mView.scrollToPositionWithOffset(index, DOCK_OFFSET);
+            }
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "index: " + strIndex + " is invalid", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private TextView createSimpleTextView(String text) {
@@ -111,7 +135,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    final int top = v.getTop() - 100;
+                    final int top = v.getTop() - DOCK_OFFSET;
                     mView.smoothScrollBy(0, top);
                 }
             });
@@ -127,16 +151,16 @@ public class RecyclerViewActivity extends AppCompatActivity {
             holder.textView.setText(data.get(position));
             holder.itemView.setTag("item " + position);
             holder.itemView.setBackgroundColor(position % 2 == 0 ? Color.LTGRAY : Color.WHITE);
-            //((AspectRatioLayout) holder.itemView).setRatio(mockRatio(position));
+            ((AspectRatioLayout) holder.itemView).setRatio(mockRatio(position));
         }
 
         private float mockRatio(int position) {
             final int index = position % 3;
             switch (index) {
-                case 0: return 0.56f;
+                //case 0: return 0.56f;
                 //case 1: return 1f;
                 //case 2: return 1.78f;
-                default: return 1f;
+                default: return 1.78f;
             }
         }
     

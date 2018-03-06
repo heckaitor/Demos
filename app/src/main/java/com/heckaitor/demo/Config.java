@@ -9,9 +9,7 @@ import com.heckaitor.demo.views.BezierActivity;
 import com.heckaitor.demo.views.ImageScaleActivity;
 import com.heckaitor.demo.views.ListViewActivity;
 import com.heckaitor.demo.views.RecyclerViewActivity;
-import com.heckaitor.demo.views.UiVisibilityActivity;
 import com.heckaitor.demo.views.ViewCoordinateActivity;
-import com.heckaitor.demo.views.ViewStubActivity;
 import com.heckaitor.demo.views.interceptradio.InterceptRadioActivity;
 
 import java.util.ArrayList;
@@ -66,8 +64,6 @@ public class Config {
         viewDemos.add(new DemoDesc("Bezier曲线", "通过一组固定的点绘制bezier曲线", BezierActivity.class));
         viewDemos.add(new DemoDesc("Intercept RadioButton", "在普通单选按钮的基础上，增加了选项变更的拦截操作", InterceptRadioActivity.class));
         viewDemos.add(new DemoDesc("ImageView.ScaleType", "实际体验ImageView设置不同的scaleType的效果", ImageScaleActivity.class));
-        viewDemos.add(new DemoDesc("SystemUiVisibility", "体验View.setSystemUiVisibility的效果，控制界面状态栏、导航栏、沉浸式效果", UiVisibilityActivity.class));
-        viewDemos.add(new DemoDesc("View Stub", "ViewStub使用过程的一些坑", ViewStubActivity.class));
         viewDemos.add(new DemoDesc("View Coordinate", "View坐标系", ViewCoordinateActivity.class));
         mEntrances.put(Category.VIEW, viewDemos);
 

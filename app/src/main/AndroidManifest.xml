@@ -27,9 +27,7 @@
             android:name=".contents.asyncdialog.AsyncTaskActivity"
             android:configChanges="orientation|screenSize"/>
         <activity android:name=".contents.PermissionActivity"/>
-        <activity android:name=".views.UiVisibilityActivity"/>
         <activity android:name=".views.InflateLayoutActivity"/>
-        <activity android:name=".views.ViewStubActivity"/>
         <activity android:name=".contents.popw.PopupWindowActivity"/>
         <activity
             android:name=".SettingsActivity"
@@ -46,6 +44,8 @@
         <activity android:name=".views.ListViewActivity">
         </activity>
         <activity android:name=".anim.AlphaControlActivity">
+        </activity>
+        <activity android:name=".contents.pager.ViewPagerActivity">
         </activity>
     </application>
 
