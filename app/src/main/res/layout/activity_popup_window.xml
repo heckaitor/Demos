@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.heckaitor.demo.contents.popw.PopupWindowActivity">
+    tools:context=".popw.PopupWindowActivity">
 
     <Button
         android:id="@+id/btn_show_original_pop"
@@ -123,7 +123,7 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_gravity="center"
-            android:background="@drawable/background"
+            android:background="@drawable/ic_background"
             android:text="target"/>
     </FrameLayout>
 

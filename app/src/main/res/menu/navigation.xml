@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/nav_content"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Content"/>
+
+    <item
         android:id="@+id/nav_views"
         android:icon="@drawable/ic_menu_gallery"
         android:title="Views"/>
@@ -10,10 +15,6 @@
         android:id="@+id/nav_animates"
         android:icon="@drawable/ic_menu_share"
         android:title="Animates"/>
-    <item
-        android:id="@+id/nav_content"
-        android:icon="@drawable/ic_menu_slideshow"
-        android:title="Content"/>
 
     <item
         android:id="@+id/nav_tools"

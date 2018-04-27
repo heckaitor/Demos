@@ -11,32 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.heckaitor.interceptradio.InterceptedRadioButton
+        <com.heckaitor.demo.view.InterceptedRadioButton
             android:id="@+id/radio1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="item 1"
             android:checked="true"/>
 
-        <com.heckaitor.interceptradio.InterceptedRadioButton
+        <com.heckaitor.demo.view.InterceptedRadioButton
             android:id="@+id/radio2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="item 2"/>
 
-        <com.heckaitor.interceptradio.InterceptedRadioButton
+        <com.heckaitor.demo.view.InterceptedRadioButton
             android:id="@+id/radio3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="item 3"/>
 
-        <com.heckaitor.interceptradio.InterceptedRadioButton
+        <com.heckaitor.demo.view.InterceptedRadioButton
             android:id="@+id/radio4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="item 4"/>
 
-        <com.heckaitor.interceptradio.InterceptedRadioButton
+        <com.heckaitor.demo.view.InterceptedRadioButton
             android:id="@+id/radio5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

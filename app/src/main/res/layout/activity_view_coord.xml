@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.heckaitor.demo.views.ViewCoordinateActivity">
+    tools:context="com.heckaitor.demo.coord.ViewCoordinateActivity">
 
     <FrameLayout
         android:layout_width="0dp"
@@ -21,7 +21,7 @@
             android:id="@+id/textView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/background"
+            android:background="@drawable/ic_background"
             android:gravity="center"
             android:text="-_-"
             android:textSize="32sp"/>

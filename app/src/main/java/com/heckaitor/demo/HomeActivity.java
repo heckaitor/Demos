@@ -93,9 +93,9 @@ public class HomeActivity extends AppCompatActivity
     
     private int item2Index(int itemId) {
         switch (itemId) {
-            case R.id.nav_views: return 0;
-            case R.id.nav_animates: return 1;
-            case R.id.nav_content: return 2;
+            case R.id.nav_content: return 0;
+            case R.id.nav_views: return 1;
+            case R.id.nav_animates: return 2;
             case R.id.nav_tools: return 3;
             default: return -1;
         }
@@ -103,9 +103,9 @@ public class HomeActivity extends AppCompatActivity
     
     private int index2Item(int index) {
         switch (index) {
-            case 0: return R.id.nav_views;
-            case 1: return R.id.nav_animates;
-            case 2: return R.id.nav_content;
+            case 0: return R.id.nav_content;
+            case 1: return R.id.nav_views;
+            case 2: return R.id.nav_animates;
             case 3: return R.id.nav_tools;
             default: return -1;
         }

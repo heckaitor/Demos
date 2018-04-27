@@ -6,8 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import com.heckaitor.demo.utils.log.LogNodeFactory;
-import com.heckaitor.demo.utils.log.Logger;
+import com.heckaitor.demo.util.log.LogNodeFactory;
+import com.heckaitor.demo.util.log.Logger;
 import com.squareup.leakcanary.LeakCanary;
 
 import static com.heckaitor.demo.SettingsActivity.TERMINAL_LOG_ENABLE;

@@ -1,1 +1,1 @@
-include ':app', ':interceptradio', ':bezier'
+include ':app'

@@ -8,8 +8,8 @@ import android.preference.SwitchPreference;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.heckaitor.demo.utils.log.LogNodeFactory;
-import com.heckaitor.demo.utils.log.Logger;
+import com.heckaitor.demo.util.log.LogNodeFactory;
+import com.heckaitor.demo.util.log.Logger;
 
 public class SettingsActivity extends AppCompatActivity {
     

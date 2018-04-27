@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.heckaitor.demo.common.FixScrollRecyclerView
+    <com.heckaitor.demo.view.FixScrollRecyclerView
         android:id="@+id/rv_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -1,5 +1,7 @@
 package com.heckaitor.demo.utils;
 
+import com.heckaitor.demo.util.SingleLinkedList;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;

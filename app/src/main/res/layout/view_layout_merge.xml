@@ -5,7 +5,7 @@
     <!-- 对mege标签的所有属性设置都不会生效 -->
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="match_parent"-->
-    <!--android:background="@drawable/background"-->
+    <!--android:ic_background="@drawable/ic_background"-->
     <!--android:orientation="vertical"-->
     <!--android:padding="12dp"-->
 

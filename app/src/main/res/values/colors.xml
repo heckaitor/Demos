@@ -6,8 +6,9 @@
     <color name="common_gray_33">#333333</color>
     <color name="common_gray_63">#636363</color>
     <color name="common_gray_93">#939393</color>
-    <color name="white">#FFFFFF</color>
+    <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="red">#FF0000</color>
     <color name="color_light_background">#19000000</color>
+    <color name="search_trans_color">#66000000</color>
 </resources>
