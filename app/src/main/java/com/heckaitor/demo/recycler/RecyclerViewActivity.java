@@ -99,32 +99,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 //Logger.v(RecyclerViewActivity.this, "onScrolled", dx + ", " + dy);
             }
         });
-
-        mView.post(new Runnable() {
-            @Override
-            public void run() {
-                Logger.i(RecyclerViewActivity.this, "set single item");
-                mDataAdapter.setSingleData("single item");
-                mDataAdapter.notifyDataSetChanged();
-            }
-        });
-
-        mView.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Logger.i(RecyclerViewActivity.this, "set items");
-
-                mAdapter.removeHeaderView(simpleTextView);
-                mAdapter.addHeaderView(createSimpleTextView("head 2"));
-
-                List<String> newData = new ArrayList<>();
-                for (int i = 0; i < 10; i++) {
-                    newData.add("item " + i);
-                }
-                mDataAdapter.setData(newData);
-                mDataAdapter.notifyDataSetChanged();
-            }
-        }, 1000);
     }
 
     @OnClick(R.id.btn_go)
@@ -156,11 +130,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
         private List<String> data;
 
         public ContentAdapter() {
-//            final int SIZE = 30;
-//            data = new ArrayList<>(SIZE);
-//            for (int i = 0; i < SIZE; i++) {
-//                data.add("item " + i);
-//            }
+            final int SIZE = 30;
+            data = new ArrayList<>(SIZE);
+            for (int i = 0; i < SIZE; i++) {
+                data.add("item " + i);
+            }
         }
 
         private void ensureList() {
