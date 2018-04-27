@@ -9,6 +9,6 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="red">#FF0000</color>
-    <color name="color_light_background">#19000000</color>
+    <color name="light_background">#19000000</color>
     <color name="search_trans_color">#66000000</color>
 </resources>

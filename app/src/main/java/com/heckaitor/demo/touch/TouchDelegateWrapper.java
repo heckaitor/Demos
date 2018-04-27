@@ -6,7 +6,7 @@ import android.view.TouchDelegate;
 import android.view.View;
 
 import com.heckaitor.demo.util.MotionEventUtils;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.Logger;
 
 public class TouchDelegateWrapper {
     

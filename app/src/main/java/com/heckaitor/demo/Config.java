@@ -1,6 +1,7 @@
 package com.heckaitor.demo;
 
 import com.heckaitor.demo.anim.AlphaControlActivity;
+import com.heckaitor.demo.autoplay.AutoPlayActivity;
 import com.heckaitor.demo.permission.PermissionActivity;
 import com.heckaitor.demo.asyncdialog.AsyncTaskActivity;
 import com.heckaitor.demo.popw.PopupWindowActivity;
@@ -24,7 +25,7 @@ import java.util.Map;
  */
 public class Config {
     
-    enum Category {
+    public enum Category {
         CONTENT,
         VIEW,
         ANIMATES,
@@ -35,7 +36,7 @@ public class Config {
      * Demo信息
      * Created by heckaitor on 2017/5/25.
      */
-    static class DemoDesc {
+    public static class DemoDesc {
         
         public DemoDesc(String title, String desc, Class target) {
             this.title = title;
@@ -43,9 +44,9 @@ public class Config {
             this.target = target;
         }
         
-        String title;  //标题
-        String desc;   //简介
-        Class target;  //目标Activity，demo入口
+        public final String title;  //标题
+        public final String desc;   //简介
+        public final Class target;  //目标Activity，demo入口
     }
     
     private static Map<Category, List<DemoDesc>> mEntrances = new HashMap<>();
@@ -66,6 +67,7 @@ public class Config {
         contentDemos.add(new DemoDesc("PopupWindow", "PopupWindow的坑", PopupWindowActivity.class));
         contentDemos.add(new DemoDesc("RecyclerView", "疑难杂症", RecyclerViewActivity.class));
         contentDemos.add(new DemoDesc("ListView", "疑难杂症", ListViewActivity.class));
+        contentDemos.add(new DemoDesc("自动播放", "模拟视频流自动播放机制", AutoPlayActivity.class));
         mEntrances.put(Category.CONTENT, contentDemos);
 
 

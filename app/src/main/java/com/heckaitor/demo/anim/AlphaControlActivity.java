@@ -11,7 +11,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.heckaitor.demo.R;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.Logger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,4 +1,4 @@
-package com.heckaitor.demo.util.log;
+package com.heckaitor.utils.log;
 
 import android.content.Context;
 

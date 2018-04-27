@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.heckaitor.demo.R;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.Logger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

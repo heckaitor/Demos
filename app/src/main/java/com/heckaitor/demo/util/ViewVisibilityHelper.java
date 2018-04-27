@@ -4,7 +4,7 @@ import android.graphics.Rect;
 import android.support.annotation.NonNull;
 import android.view.View;
 
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.Logger;
 
 /**
  * View可见性的工具类

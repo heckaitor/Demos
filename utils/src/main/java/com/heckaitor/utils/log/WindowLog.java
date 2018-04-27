@@ -1,4 +1,4 @@
-package com.heckaitor.demo.util.log;
+package com.heckaitor.utils.log;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -18,15 +18,15 @@ import android.view.WindowManager;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.heckaitor.demo.R;
+import com.heckaitor.utils.R;
 
 import java.text.SimpleDateFormat;
 
-import static com.heckaitor.demo.util.log.Logger.DEBUG;
-import static com.heckaitor.demo.util.log.Logger.ERROR;
-import static com.heckaitor.demo.util.log.Logger.INFO;
-import static com.heckaitor.demo.util.log.Logger.VERBOSE;
-import static com.heckaitor.demo.util.log.Logger.WARN;
+import static com.heckaitor.utils.log.Logger.VERBOSE;
+import static com.heckaitor.utils.log.Logger.DEBUG;
+import static com.heckaitor.utils.log.Logger.INFO;
+import static com.heckaitor.utils.log.Logger.WARN;
+import static com.heckaitor.utils.log.Logger.ERROR;
 
 public class WindowLog extends LogNode {
     
@@ -129,8 +129,8 @@ public class WindowLog extends LogNode {
     
     private View generateLogView(Context context) {
         final View view = LayoutInflater.from(context).inflate(R.layout.win_log_layout, null, false);
-        final ScrollView scrollView = (ScrollView) view.findViewById(R.id.sv_log_holder);
-        mLogView = (TextView) scrollView.findViewById(R.id.tv_log_content);
+        final ScrollView scrollView = view.findViewById(R.id.sv_log_holder);
+        mLogView = scrollView.findViewById(R.id.tv_log_content);
         mLogView.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) { }

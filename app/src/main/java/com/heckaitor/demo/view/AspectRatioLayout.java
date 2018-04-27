@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 
 import com.heckaitor.demo.R;
 import com.heckaitor.demo.util.StringUtils;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.Logger;
 
 /**
  * 支持自适应宽高比的FrameLayout

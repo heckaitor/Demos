@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.heckaitor.demo.R;
 import com.heckaitor.demo.util.StringUtils;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.Logger;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

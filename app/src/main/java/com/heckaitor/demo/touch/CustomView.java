@@ -2,14 +2,14 @@ package com.heckaitor.demo.touch;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.TextView;
 
 import com.heckaitor.demo.util.MotionEventUtils;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.Logger;
 
-public class CustomView extends TextView {
+public class CustomView extends AppCompatTextView {
     
     public CustomView(Context context) {
         super(context);

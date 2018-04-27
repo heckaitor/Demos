@@ -1,4 +1,4 @@
-package com.heckaitor.demo;
+package com.heckaitor.demo.home;
 
 import android.os.Bundle;
 import android.preference.Preference;
@@ -8,8 +8,9 @@ import android.preference.SwitchPreference;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.heckaitor.demo.util.log.LogNodeFactory;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.demo.R;
+import com.heckaitor.utils.log.LogNodeFactory;
+import com.heckaitor.utils.log.Logger;
 
 public class SettingsActivity extends AppCompatActivity {
     

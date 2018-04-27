@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.heckaitor.demo.R;
 import com.heckaitor.demo.util.MotionEventUtils;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.Logger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

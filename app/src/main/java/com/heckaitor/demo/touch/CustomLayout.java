@@ -12,7 +12,7 @@ import android.view.MotionEvent;
 import android.widget.LinearLayout;
 
 import com.heckaitor.demo.util.MotionEventUtils;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.Logger;
 
 public class CustomLayout extends LinearLayout {
     

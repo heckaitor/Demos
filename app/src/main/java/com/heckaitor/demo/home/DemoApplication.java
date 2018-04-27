@@ -1,4 +1,4 @@
-package com.heckaitor.demo;
+package com.heckaitor.demo.home;
 
 import android.app.Activity;
 import android.app.Application;
@@ -6,12 +6,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import com.heckaitor.demo.util.log.LogNodeFactory;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.LogNodeFactory;
+import com.heckaitor.utils.log.Logger;
 import com.squareup.leakcanary.LeakCanary;
 
-import static com.heckaitor.demo.SettingsActivity.TERMINAL_LOG_ENABLE;
-import static com.heckaitor.demo.SettingsActivity.WINDOW_LOG_ENABLE;
+import static com.heckaitor.demo.home.SettingsActivity.TERMINAL_LOG_ENABLE;
+import static com.heckaitor.demo.home.SettingsActivity.WINDOW_LOG_ENABLE;
 
 public class DemoApplication extends Application {
     

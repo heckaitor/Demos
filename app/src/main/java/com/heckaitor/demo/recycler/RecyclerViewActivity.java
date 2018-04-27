@@ -20,7 +20,7 @@ import com.heckaitor.demo.view.CommonRecyclerAdapter;
 import com.heckaitor.demo.view.DividerItemDecoration;
 import com.heckaitor.demo.view.FixScrollRecyclerView;
 import com.heckaitor.demo.util.ViewUtils;
-import com.heckaitor.demo.util.log.Logger;
+import com.heckaitor.utils.log.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
