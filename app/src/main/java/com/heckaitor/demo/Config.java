@@ -2,6 +2,8 @@ package com.heckaitor.demo;
 
 import com.heckaitor.demo.anim.AlphaControlActivity;
 import com.heckaitor.demo.autoplay.AutoPlayActivity;
+import com.heckaitor.demo.canvas.DrawActivity;
+import com.heckaitor.demo.pager.PagerActivity2;
 import com.heckaitor.demo.permission.PermissionActivity;
 import com.heckaitor.demo.asyncdialog.AsyncTaskActivity;
 import com.heckaitor.demo.popw.PopupWindowActivity;
@@ -72,11 +74,13 @@ public class Config {
 
 
         final List viewDemos = new ArrayList();
+        viewDemos.add(new DemoDesc("Draw", "Canvas画图", DrawActivity.class));
         viewDemos.add(new DemoDesc("Bezier曲线", "通过一组固定的点绘制bezier曲线", BezierActivity.class));
         viewDemos.add(new DemoDesc("Intercept RadioButton", "在普通单选按钮的基础上，增加了选项变更的拦截操作", InterceptRadioActivity.class));
         viewDemos.add(new DemoDesc("ImageView.ScaleType", "实际体验ImageView设置不同的scaleType的效果", ImageScaleActivity.class));
         viewDemos.add(new DemoDesc("View Coordinate", "View坐标系", ViewCoordinateActivity.class));
         viewDemos.add(new DemoDesc("TouchDelegate", "一般用于在不改变布局的情况下，扩大View的点击区域，但并不常用，而且使用过程中会有一些容易被忽略的问题", TouchDelegateActivity.class));
+        viewDemos.add(new DemoDesc("ViewPager", "ViewPager的用法", PagerActivity2.class));
         mEntrances.put(Category.VIEW, viewDemos);
 
         final List animateDemos = new ArrayList();

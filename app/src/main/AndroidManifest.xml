@@ -46,6 +46,10 @@
         </activity>
         <activity android:name=".autoplay.AutoPlayActivity">
         </activity>
+        <activity android:name=".pager.PagerActivity2">
+        </activity>
+        <activity android:name=".canvas.DrawActivity">
+        </activity>
     </application>
 
 </manifest>
